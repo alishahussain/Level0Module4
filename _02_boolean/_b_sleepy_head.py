@@ -2,7 +2,9 @@
 Use boolean variables to control program logic between two different code
 paths.
 """
-
+import turtle
+from tkinter import messagebox
+import turtle
 
 if __name__ == '__main__':
     # TODO)
@@ -17,4 +19,34 @@ if __name__ == '__main__':
     #  4. Use two boolean variables, one to indicate if a shape should be red,
     #     the other to indicate if the shape is to be square. When both
     #     variables are true, use a turtle to draw a red square.
+    boy = turtle.Turtle()
+    shape1 = True
+    shape2 = False
+    isWeekend = False
+    exam_pass = True
+    is_game = True
+    if isWeekend:
+        messagebox.showinfo(title=None, message='its the weekend')
+    else:
+        messagebox.showinfo(title=None, message='its not the weekend')
+    if exam_pass:
+        messagebox.showinfo(title=None, message='you passed!')
+    else:
+        messagebox.showinfo(title=None, message='you failed buddy')
+    if is_game:
+        messagebox.showinfo(title=None, message='the game is not over')
+    else:
+        messagebox.showinfo(title=None, message='the games over')
+    if shape1:
+        boy.pencolor('red')
+        boy.begin_fill()
+        boy.shape('circle')
+        boy.end_fill()
+    if shape2:
+        boy.pencolor('black')
+        boy.shape('square')
+
+
+
+
     pass
