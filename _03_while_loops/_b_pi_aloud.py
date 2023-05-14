@@ -10,16 +10,23 @@ if __name__ == '__main__':
     window.withdraw()
     # TODO) Place the first 20 digits of pi into a variable as a string
     #  3.1415926535897932384
-    pi = 3.1415926535897932384
-    # TODO) Print out the first 3 digits of pi. For example,
-    #  pi_str[0]   # first digit
-    #  pi_str[1]   # second digit
+    pi = '3.1415926535897932384'
+    # TODO) Print out the first 3 digits of pi
+    print(pi[0])
+    print(pi[1])
+    pos = 2
+
 
     # TODO) Use a while loop to keep asking for the next digit of pi
-    while pi:
-        print('correct')
-    else:
-        print('incorrect')
+    while pos < len(pi):
+        answer = simpledialog.askstring(title=None, prompt='what is the next digit of pi?')
+        if answer == pi[pos]:
+            print('correct')
+            pos+=1
+        elif answer == 'stop':
+            exit()
+        else:
+            print('incorrect')
         pass
         # TODO) If they are correct, print "correct".
         #  If they are not, print "incorrect" and break out of the while loop
